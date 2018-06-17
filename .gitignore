@@ -1,0 +1,26 @@
+# =========================
+# Jupyter Notebooks
+# =========================
+# Checkpoints
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Remove previous Checkpoints
+#   git rm -r .ipynb_checkpoints/
+
+
+# =========================
+# Operating System Files
+# =========================
+
+# WINDOW
+# =========================
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/

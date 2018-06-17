@@ -1,0 +1,130 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4073,        121]
+NotebookOptionsPosition[      3637,        102]
+NotebookOutlinePosition[      3990,        117]
+CellTagsIndexPosition[      3947,        114]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Remove", "[", 
+   RowBox[{"Evaluate", "[", 
+    RowBox[{
+     RowBox[{"Context", "[", "]"}], "<>", "\"\<*\>\""}], "]"}], "]"}], ";", 
+  RowBox[{"Clear", "[", "Subscript", "]"}], ";", 
+  RowBox[{"Clear", "[", "Derivative", "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Aviscoplastic1", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{
+     RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+     "\"\<viscoplastic1.mtx\>\""}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"bviscoplastic1", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{
+     RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+     "\"\<viscoplastic1_b.mtx\>\""}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"LinearSolve", "[", 
+    RowBox[{"Aviscoplastic1", ",", "bviscoplastic1", ",", 
+     RowBox[{"Method", "\[Rule]", "\"\<Multifrontal\>\""}]}], "]"}], ";"}], "//",
+   "AbsoluteTiming"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Aviscoplastic2", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{
+     RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+     "\"\<viscoplastic2.mtx\>\""}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"bviscoplastic2", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{
+     RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+     "\"\<viscoplastic2_b.mtx\>\""}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"LinearSolve", "[", 
+    RowBox[{"Aviscoplastic2", ",", "bviscoplastic2", ",", 
+     RowBox[{"Method", "\[Rule]", "\"\<Multifrontal\>\""}]}], "]"}], ";"}], "//",
+   "AbsoluteTiming"}]}], "Input",
+ CellChangeTimes->{{3.737784900871496*^9, 3.7377849125231624`*^9}, {
+  3.737784956559681*^9, 3.7377849624080153`*^9}, {3.737785007186577*^9, 
+  3.737785048031913*^9}, {3.7377850964016795`*^9, 3.7377851943902845`*^9}, {
+  3.7378009470836077`*^9, 3.737800993523264*^9}, {3.7378010253190827`*^9, 
+  3.737801025713105*^9}, {3.7379654994274125`*^9, 3.7379655322942924`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Remove", "::", "rmnsm"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"There are no symbols matching \
+\\\"\[NoBreak]\\!\\(\\\"Global`*\\\"\\)\[NoBreak]\\\". \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/Remove/rmnsm\\\", \
+ButtonNote -> \\\"Remove::rmnsm\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7379677037044897`*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0.03165458331295796`", ",", "Null"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.7378010318064537`*^9, 3.737965503434642*^9, {3.7379655344074135`*^9, 
+   3.737965542527878*^9}, 3.737967704074511*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"1.4633753337788749`", ",", "Null"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.7378010318064537`*^9, 3.737965503434642*^9, {3.7379655344074135`*^9, 
+   3.737965542527878*^9}, 3.737967705993621*^9}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.7379654820804205`*^9, 3.7379654976593113`*^9}}]
+},
+WindowSize->{1920, 980},
+WindowMargins->{{-9, Automatic}, {Automatic, -9}},
+FrontEndVersion->"10.1 for Microsoft Windows (64-bit) (March 23, 2015)",
+StyleDefinitions->"Linhl_Stylesheet.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 1990, 48, 247, "Input"],
+Cell[2573, 72, 468, 10, 20, "Message"],
+Cell[3044, 84, 238, 5, 42, "Output"],
+Cell[3285, 91, 237, 5, 42, "Output"]
+}, Open  ]],
+Cell[3537, 99, 96, 1, 42, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
